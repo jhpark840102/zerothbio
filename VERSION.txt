@@ -1,0 +1,6 @@
+Document ID: ZBIO-BRD-WEB-SITE-001
+Website Release: v1.0 / Controlled Release / External
+Deployment Package: GitHub Pages Deployment v1.0
+Deployment Build Date: 2026-08-13
+Packaging Rule: repository-root static deployment
+Latest DBTL Asset: assets/propel-closed-loop-protein-engineering-system.webp (1635 x 962)

@@ -133,3 +133,10 @@ p{font-size:16px}
 .workflow-summary strong{display:block;color:#fff;font-size:13px;line-height:1.55;font-weight:520;margin-top:14px}
 @media(max-width:900px){.workflow-summary{grid-template-columns:1fr 1fr}.workflow-summary article:nth-child(2){border-right:0}.workflow-summary article:nth-child(-n+2){border-bottom:1px solid var(--navy-600)}}
 @media(max-width:760px){.propel-visual{margin-top:42px}.propel-visual figcaption{grid-template-columns:1fr;gap:8px}.propel-visual figcaption .mono{white-space:normal}.workflow-summary{grid-template-columns:1fr}.workflow-summary article{border-right:0!important;border-bottom:1px solid var(--navy-600)!important;min-height:0}.workflow-summary article:last-child{border-bottom:0!important}.propel-visual-link::after{display:none}}
+
+/* GitHub Pages deployment build — 2026-08-13
+   Latest cropped ProPEL DBTL master asset applied to the hero. */
+.hero-system-image{padding:14px;overflow:hidden}
+.hero-system-visual{display:block;margin-top:14px;background:#fff}
+.hero-system-visual img{display:block;width:100%;height:auto}
+@media(max-width:760px){.hero-system-image{padding:10px}.hero-system-visual{margin-top:10px}}

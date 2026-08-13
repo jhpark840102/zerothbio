@@ -1,0 +1,47 @@
+ZBIO-BRD-WEB-SITE-001 v1.0 — Static QA Report
+Release Build: 2026-08-12.3
+
+Result: 42/42 PASS
+
+[PASS] file:index.html
+[PASS] file:styles.css
+[PASS] file:script.js
+[PASS] file:robots.txt
+[PASS] file:sitemap.xml
+[PASS] file:release.json
+[PASS] file:VERSION.txt
+[PASS] file:README_RELEASE.txt
+[PASS] file:assets/propel-closed-loop-protein-engineering-system.png
+[PASS] file:assets/propel-closed-loop-protein-engineering-system.webp
+[PASS] file:assets/zerothbio-logo-horizontal.png
+[PASS] file:docs/DEPLOYMENT_SNAPSHOT.md
+[PASS] local-ref:assets/propel-closed-loop-protein-engineering-system.png
+[PASS] local-ref:assets/propel-closed-loop-protein-engineering-system.webp
+[PASS] local-ref:assets/zerothbio-logo-horizontal.png
+[PASS] local-ref:script.js
+[PASS] local-ref:styles.css
+[PASS] commercial:C1110
+[PASS] commercial:C1120
+[PASS] commercial:100 rxn
+[PASS] commercial:200 rxn
+[PASS] commercial:50 µL
+[PASS] public-absent:384-Well HTS
+[PASS] public-absent:384-well HTS
+[PASS] public-absent:1536-Well uHTS
+[PASS] public-absent:1536-well uHTS
+[PASS] public-absent:C1210
+[PASS] public-absent:C1220
+[PASS] public-absent:C1230
+[PASS] public-absent:Research 96
+[PASS] public-absent:Screening 384
+[PASS] public-absent:Discovery 960
+[PASS] message:Building an Autonomous Protein Engineering System
+[PASS] message:Before the First, There’s Zeroth.
+[PASS] message:ProPEL
+[PASS] message:experimentally measured functional protein data
+[PASS] ProPEL PNG byte-identical to user source — b0acbb6a7c9fea766ab5047e4f5c5f0e9479dfba5d76bfff918f29062fc893dc
+[PASS] ProPEL dimensions 1666x944 — (1666, 944)
+[PASS] release build 2026-08-12.3
+[PASS] source authority v1.5
+[PASS] typography authority
+[PASS] no external runtime JS/CSS

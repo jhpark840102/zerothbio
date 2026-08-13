@@ -1,0 +1,26 @@
+{
+  "document_id": "ZBIO-BRD-WEB-SITE-001",
+  "document_name": "ZerothBIO Corporate Website Master",
+  "version": "v1.0",
+  "status": "Controlled Release / External — Deployment Package",
+  "issued": "2026-08-12",
+  "effective": "2026-08-12",
+  "release_build": "2026-08-12.3",
+  "supersedes": "v1.0 Controlled Release build 2026-08-12.2",
+  "requested_deployment_snapshot_url": "https://zerothbio-corporate.jhparkace.chatgpt.site/",
+  "canonical_url": "https://www.zerothbio.com/",
+  "release_boundary": "Static, tracking-free corporate website master",
+  "control_basis": [
+    "ZBIO-BRD-WEB-COPY-001 v1.0",
+    "ZBIO-BRD-STRATEGY-001 v1.4",
+    "ZBIO-BRD-MSG-001 v1.0",
+    "ZBIO-GOV-SRC-001 v1.5",
+    "ZBIO-BRD-TYPE-001 v1.0",
+    "ZBIO-BRD-001-PUB v1.0",
+    "ZBIO-BRD-COLOR-001 v1.1",
+    "ZBIO-PRD-MASTER-001 v1.3"
+  ],
+  "primary_system_visual": "assets/propel-closed-loop-protein-engineering-system.png",
+  "primary_system_visual_source": "User-provided ProPEL + experimentally measured functional protein data structure image",
+  "live_snapshot_verification": "External fetch of the requested chatgpt.site URL returned HTTP 401; package is based on the current controlled source associated with this deployment and the latest approved local assets."
+}

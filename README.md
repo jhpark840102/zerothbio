@@ -58,3 +58,15 @@ Before production publication, review the footer/distribution language and conta
 - Added a Product Brochure download card to the Documents section.
 - Updated the CFPS section link to route users to all product documents.
 - Responsive document grid now supports four download assets.
+
+
+## Favicon files
+
+Included favicon assets:
+- assets/favicon-16x16.png
+- assets/favicon-32x32.png
+- assets/apple-touch-icon.png
+- assets/android-chrome-192x192.png
+- assets/android-chrome-512x512.png
+- assets/favicon.ico
+- site.webmanifest

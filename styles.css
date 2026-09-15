@@ -140,3 +140,19 @@ p{font-size:16px}
 .hero-system-visual{display:block;margin-top:14px;background:#fff}
 .hero-system-visual img{display:block;width:100%;height:auto}
 @media(max-width:760px){.hero-system-image{padding:10px}.hero-system-visual{margin-top:10px}}
+
+
+/* Product literature & technical documents — GitHub Pages deployment v1.2 */
+.product-action-links{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.documents{background:#fff}
+.document-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:52px}
+.document-card{border:1px solid #D9DEE2;border-top:3px solid var(--navy);padding:28px 24px 26px;background:#fff;min-height:280px;display:flex;flex-direction:column}.document-card.featured-document{border-top-color:var(--teal-600);background:linear-gradient(180deg,rgba(26,187,207,.055),#fff 34%)}
+.document-meta{display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--teal-600)}
+.document-card h3{font-size:20px;margin:32px 0 14px;color:var(--navy)}
+.document-card p{font-size:14px;color:var(--ink-2);margin:0 0 26px}
+.document-download{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:auto;border-top:1px solid #E1E5E8;padding-top:18px;color:var(--navy);font-size:13px;font-weight:650}
+.document-download:hover,.document-download:focus-visible{color:var(--teal-600)}
+.document-note{margin:24px 0 0;color:var(--ink-3);font-size:12px;max-width:860px}
+@media(max-width:1100px){.document-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.document-grid{grid-template-columns:1fr}.document-card{min-height:0}}
+@media(max-width:760px){.product-action-links{align-items:flex-start;flex-direction:column;gap:14px}}

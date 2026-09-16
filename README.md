@@ -70,3 +70,6 @@ Included favicon assets:
 - assets/android-chrome-512x512.png
 - assets/favicon.ico
 - site.webmanifest
+
+## v1.4 CFPS pricing update
+Added EN/KR pricing next to the CFPS inquiry note. Prices are shown as total / per mL; bulk total is unspecified. Existing assets, documents and scripts are preserved.

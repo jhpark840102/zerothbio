@@ -1,2 +1,3 @@
-ZBIO-BRD-WEB-SITE-001 ZerothBIO GitHub Pages Deployment v1.3
-Feature: favicon asset set added
+ZBIO-BRD-WEB-SITE-001 ZerothBIO GitHub Pages Deployment v1.4 Pricing
+Base: v1.3_Favicon
+Feature: bilingual CFPS pricing table (KRW total and per mL)

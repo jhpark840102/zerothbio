@@ -156,3 +156,15 @@ p{font-size:16px}
 @media(max-width:1100px){.document-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.document-grid{grid-template-columns:1fr}.document-card{min-height:0}}
 @media(max-width:760px){.product-action-links{align-items:flex-start;flex-direction:column;gap:14px}}
+
+/* CFPS pricing — deployment v1.4 */
+.cfps-pricing{margin-top:20px;border:1px solid #D9DEE2;border-top:3px solid var(--teal);background:var(--paper);min-width:0}
+.cfps-pricing-heading{padding:22px 24px 18px}
+.cfps-pricing-heading h3{margin:6px 0;color:var(--navy);font-size:20px}
+.cfps-pricing-heading p{margin:0;font-size:12px;color:var(--ink-2)}
+.cfps-price-table{border-collapse:collapse;width:100%;font-size:14px;color:var(--navy);font-variant-numeric:tabular-nums}
+.cfps-price-table th,.cfps-price-table td{padding:14px 20px;border-top:1px solid #E5E8EB;text-align:right;white-space:nowrap}
+.cfps-price-table th:first-child{text-align:left}
+.cfps-price-table thead{background:var(--teal-50);font-size:12px}
+.cfps-price-table tbody th{font-weight:500}
+@media(max-width:480px){.cfps-pricing-heading{padding:20px 16px 16px}.cfps-price-table{font-size:12px}.cfps-price-table th,.cfps-price-table td{padding:12px 10px}.cfps-price-table thead{font-size:11px}}

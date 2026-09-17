@@ -348,3 +348,9 @@ footer a:hover{text-decoration:underline}
 .lang a{color:var(--z-muted)}
 .lang a:hover{color:var(--z-navy)}
 @media (max-width:520px){.wf li{display:block}.wf li b{margin:4px 0 2px}}
+.hp{position:absolute!important;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+.cform{position:relative}
+.form-msg.ok{background:#E6F2EA;color:#24553A}
+.form-msg.err{background:#FFF1EE;color:#8A2A1B}
+.form-msg a{color:inherit;font-weight:600}
+button[disabled]{opacity:.65;cursor:progress}

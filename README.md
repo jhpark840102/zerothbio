@@ -7,8 +7,10 @@ index.html          Homepage (EN)
 ko/index.html       Homepage (KR) — language switch EN / KR in the header
 404.html            Not-found page
 assets/css/style.css
-assets/js/main.js   Mobile menu, active nav, contact form (opens email app)
+assets/js/config.js Contact form settings (EmailJS keys) — edit this
+assets/js/main.js   Mobile menu, active nav, contact form logic
 assets/img/         Logos, hero photo, favicons, OG image
+form-backend/       EmailJS setup guide + templates (not used by the site)
 downloads/          Approved PDFs (add before going live — see downloads/README.md)
 CNAME               Custom domain: www.zerothbio.com
 .nojekyll           Serve files as-is
@@ -41,9 +43,13 @@ Then in Settings → Pages, enable **Enforce HTTPS** once the certificate is iss
 - Keep both pages in sync: any product value, contact detail or document version change must be applied to **both** `index.html` and `ko/index.html`.
 - Korean copy uses the approved Korean slogan/terms (Brand plan v1.3.1 §6, Leaflet ZBIO-MKT-CFPS-LEF-001). Company name in Korean text: 제로스바이오; legal: (주)제로스바이오.
 
-## Contact form
+## Contact form → admin email (EmailJS)
 
-GitHub Pages has no server. The form validates input and opens the visitor's email app with a pre-filled message to `zerothbio@gmail.com`. To receive submissions directly, connect a form service (e.g. Formspree) later — a privacy notice will then be required.
+- Settings live in **one file**: `assets/js/config.js` (EmailJS Public Key, Service ID, Template ID). Both EN and KR pages use it.
+- Setup guide (Korean) and ready-to-paste email templates: `form-backend/README.md`, `form-backend/emailjs/`.
+- Empty values = fallback: opens the visitor's email app. Send failure = one-click email-app fallback.
+- Built-in protection: blockHeadless, limitRate (10 s), honeypot field, minimum fill time.
+- Alternative backend without a third party: Google Apps Script (`form-backend/apps-script/`, set `provider: 'endpoint'`).
 
 ## Maintenance rules (ZBIO-BRD-WEB-001)
 

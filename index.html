@@ -24,6 +24,7 @@
 <link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://api.emailjs.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -244,7 +245,7 @@
             </tbody>
           </table>
         </div>
-        <p class="panel-foot">Expression fields follow the approved CFPS Kit standard reaction. Assay choice depends on the target protein.</p>
+        <p class="panel-foot">Expression fields follow the approved CFPS Kit standard reaction (ZBIO-MKT-CFPS-PDS-001 v1.1). Assay choice depends on the target protein.</p>
       </div>
     </div>
     <div class="flywheel" aria-label="Measured data loop">
@@ -309,7 +310,7 @@
             <tr><th scope="row">Purification</th><td>Not included</td></tr>
           </tbody>
         </table>
-        <p class="fn-note">* Protein yield is stated on a 50 µL basis and is target-dependent. The stated range is not an expected value for every construct.</p>
+        <p class="fn-note">* Protein yield is stated on a 50 µL basis and is target-dependent. The stated range is not an expected value for every construct. Source: ZBIO-MKT-CFPS-PDS-001 v1.1.</p>
       </div>
       <div class="skus">
         <article class="sku" aria-labelledby="sku1">
@@ -405,10 +406,10 @@
       <p class="lead">Every download shows its document number and version, so you always know which revision you are working from. Consult the current MSDS before handling.</p>
     </div>
     <ul class="doc-list">
-      <li><span class="t">Commercial Product Sheet · C1110 / C1120</span><span class="id"></span><span class="fmt">PDF · EN</span><a class="tlink" href="downloads/ZerothBIO_CFPS_Product_Sheet_PDS-001_v1.1.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
-      <li><span class="t">CFPS Kit User Manual</span><span class="id"></span><span class="fmt">PDF</span><a class="tlink" href="downloads/ZerothBIO_CFPS_Manual.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
-      <li><span class="t">MSDS · 2x Master Mix</span><span class="id"></span><span class="fmt">PDF</span><a class="tlink" href="downloads/ZerothBIO_MSDS_2x_MasterMix.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
-      <li><span class="t">MSDS · E. coli Extract</span><span class="id">·</span><span class="fmt">PDF</span><a class="tlink" href="downloads/ZerothBIO_MSDS_Ecoli_Extract.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
+      <li><span class="t">Commercial Product Sheet · C1110 / C1120</span><span class="id">ZBIO-MKT-CFPS-PDS-001 · v1.1</span><span class="fmt">PDF · EN</span><a class="tlink" href="downloads/ZerothBIO_CFPS_Product_Sheet_PDS-001_v1.1.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
+      <li><span class="t">CFPS Kit User Manual</span><span class="id">ZBIO-PRD-CFPS-MANUAL-001 · v1.1.2</span><span class="fmt">PDF</span><a class="tlink" href="downloads/ZerothBIO_CFPS_Manual.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
+      <li><span class="t">MSDS · 2x Master Mix</span><span class="id">ZBIO-PRD-CFPS-MSDS-001 · v1.0</span><span class="fmt">PDF</span><a class="tlink" href="downloads/ZerothBIO_MSDS_2x_MasterMix.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
+      <li><span class="t">MSDS · E. coli Extract</span><span class="id">ZBIO-PRD-CFPS-MSDS-002 · v1.0</span><span class="fmt">PDF</span><a class="tlink" href="downloads/ZerothBIO_MSDS_Ecoli_Extract.pdf" download>Download <span class="arr" aria-hidden="true">↓</span></a></li>
     </ul>
   </div>
 </section>
@@ -429,6 +430,7 @@
       </dl>
     </div>
     <form class="cform" id="cform" novalidate aria-labelledby="form-h">
+      <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
       <h3 id="form-h">Start at Zeroth.</h3>
       <div class="row2">
         <div class="field"><label for="f-name">Name <span class="req">(required)</span></label><input id="f-name" name="name" autocomplete="name" required aria-required="true"></div>
@@ -445,8 +447,8 @@
         </select>
       </div>
       <div class="field"><label for="f-msg">Message <span class="req">(required)</span></label><textarea id="f-msg" name="message" required aria-required="true"></textarea></div>
-      <label class="consent" for="f-consent"><input type="checkbox" id="f-consent" name="consent" required aria-required="true"> I agree to the collection and use of my name, email and organization to respond to this inquiry.</label>
-      <div><button class="btn btn-primary" type="submit">Talk to ZerothBIO <span class="arr" aria-hidden="true">→</span></button></div>
+      <label class="consent" for="f-consent"><input type="checkbox" id="f-consent" name="consent" required aria-required="true"> <span>I agree that ZerothBIO collects my name, email, organization and message to respond to this inquiry, and keeps them for 1 year after the inquiry is handled. I may decline, but ZerothBIO cannot respond without this information. <span class="req">(required)</span></span></label>
+      <div><button class="btn btn-primary" type="submit" id="f-submit">Talk to ZerothBIO <span class="arr" aria-hidden="true">→</span></button></div>
       <p class="form-msg" id="form-msg" role="status" hidden></p>
     </form>
   </div>
@@ -467,9 +469,12 @@
     </div>
     <div class="f-bottom">
       <span>© 2026 ZerothBIO Inc. · Before the First, There’s Zeroth.</span>
+      <span>CFPS Kit: For Research Use Only. Not for use in diagnostic or therapeutic procedures.</span>
     </div>
   </div>
 </footer>
+<script src="assets/js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

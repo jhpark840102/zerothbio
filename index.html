@@ -23,6 +23,192 @@
 <link href="./assets/favicon.ico" rel="shortcut icon"/>
 <link href="./site.webmanifest" rel="manifest"/>
 <link href="styles.css" rel="stylesheet"/>
+
+<style id="cfps-pricing-redesign-v15">
+/* CFPS pricing redesign — index-only override */
+#cfps .product-stack{gap:18px}
+#cfps .product-card-priced{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(330px,.78fr);
+  gap:0;
+  align-items:stretch;
+  padding:0;
+  overflow:hidden;
+  border:1px solid #D8E0E5;
+  border-top:4px solid #09223E;
+  background:#fff;
+  box-shadow:0 12px 34px rgba(9,34,62,.045);
+}
+#cfps .product-card-priced .product-info{
+  min-height:226px;
+  padding:38px 40px 34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+#cfps .product-card-priced .product-info .cat{
+  color:#119AAF;
+  font-size:10px;
+  letter-spacing:.16em;
+  font-weight:700;
+}
+#cfps .product-card-priced .product-info h3{
+  margin:26px 0 14px;
+  font-size:23px;
+  line-height:1.25;
+  color:#09223E;
+  letter-spacing:-.018em;
+}
+#cfps .product-card-priced .product-info p{
+  margin:0;
+  font-size:36px;
+  line-height:1;
+  font-weight:700;
+  color:#09223E;
+  letter-spacing:-.035em;
+}
+#cfps .product-commercial{
+  min-width:0;
+  border-left:1px solid #E0E7EB;
+  display:flex;
+  flex-direction:column;
+  background:#FCFDFD;
+}
+#cfps .price-panel{border:0;background:#fff}
+#cfps .price-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  padding:0;
+  background:#DFF7FA;
+  color:#09223E;
+  text-align:left;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+#cfps .price-head span{
+  padding:17px 22px 16px;
+  border-right:1px solid rgba(9,34,62,.07);
+}
+#cfps .price-head span:last-child{border-right:0;text-align:right}
+#cfps .price-values{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  padding:0;
+  background:#fff;
+  text-align:left;
+}
+#cfps .price-values strong{
+  padding:22px 22px 21px;
+  color:#09223E;
+  font-size:18px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:-.02em;
+  border-right:1px solid #EDF1F3;
+}
+#cfps .price-values strong:last-child{border-right:0;text-align:right}
+#cfps .product-card-priced .basis{
+  margin:auto 22px 0;
+  padding:21px 0 24px 28px;
+  border:0;
+  border-top:1px solid #E4EAED;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:94px;
+}
+#cfps .product-card-priced .basis::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:21px;
+  bottom:24px;
+  width:2px;
+  background:#1ABBCF;
+}
+#cfps .product-card-priced .basis span{
+  margin:0 0 11px;
+  font-family:var(--mono);
+  font-size:9px;
+  line-height:1;
+  color:#8A99A5;
+  letter-spacing:.16em;
+}
+#cfps .product-card-priced .basis strong{
+  color:#09223E;
+  font-size:16px;
+  line-height:1.3;
+  font-weight:700;
+}
+#cfps .bulk-price-row{
+  display:grid;
+  grid-template-columns:minmax(160px,.55fr) minmax(180px,.55fr) 1.35fr;
+  gap:0;
+  align-items:stretch;
+  padding:0;
+  background:#fff;
+  border:1px solid #D8E0E5;
+  border-left:4px solid #1ABBCF;
+  box-shadow:none;
+}
+#cfps .bulk-price-row>div{padding:18px 22px}
+#cfps .bulk-price-row>div:first-child{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  gap:7px;
+}
+#cfps .bulk-price-row .cat{
+  font-family:var(--mono);
+  font-size:9px;
+  color:#119AAF;
+  letter-spacing:.15em;
+}
+#cfps .bulk-price-row strong{color:#09223E;font-size:15px}
+#cfps .bulk-price-value{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  gap:7px;
+  border-left:1px solid #E4EAED;
+  padding-left:22px;
+}
+#cfps .bulk-price-value span{font-size:10px;color:#7D8B96;font-weight:650}
+#cfps .bulk-price-value strong{font-size:17px}
+#cfps .bulk-price-note{
+  display:flex;
+  align-items:center;
+  border-left:1px solid #E4EAED;
+  padding-left:22px;
+  font-size:11px;
+  line-height:1.6;
+  color:#667784;
+}
+@media(max-width:900px){
+  #cfps .product-card-priced{grid-template-columns:1fr}
+  #cfps .product-commercial{border-left:0;border-top:1px solid #E0E7EB}
+  #cfps .product-card-priced .product-info{min-height:0;padding:30px}
+  #cfps .bulk-price-row{grid-template-columns:1fr 1fr}
+  #cfps .bulk-price-note{grid-column:1/-1;border-left:0;border-top:1px solid #E4EAED}
+}
+@media(max-width:560px){
+  #cfps .product-card-priced .product-info{padding:26px 22px}
+  #cfps .product-card-priced .product-info h3{font-size:20px;margin-top:20px}
+  #cfps .product-card-priced .product-info p{font-size:31px}
+  #cfps .price-head span,#cfps .price-values strong{padding-left:16px;padding-right:16px}
+  #cfps .price-head{font-size:10px}
+  #cfps .price-values strong{font-size:16px}
+  #cfps .product-card-priced .basis{margin-left:16px;margin-right:16px;padding-left:22px}
+  #cfps .bulk-price-row{grid-template-columns:1fr}
+  #cfps .bulk-price-value,#cfps .bulk-price-note{border-left:0;border-top:1px solid #E4EAED}
+}
+</style>
 </head>
 <body>
 
@@ -185,7 +371,7 @@
 <div class="product-info"><span class="cat">CAT. NO. C1110</span><h3>ZerothBIO Cell-Free Protein Synthesis Kit</h3><p>100 rxn</p></div>
 <div class="product-commercial">
 <div class="price-panel" aria-label="C1110 pricing">
-<div class="price-head"><span data-en="Total price" data-ko="총액">Total price</span><span data-en="Price / mL" data-ko="mL당 가격">Price / mL</span></div>
+<div class="price-head"><span data-en="Total price" data-ko="총 판매가">Total price</span><span data-en="Price / mL" data-ko="mL당 가격">Price / mL</span></div>
 <div class="price-values"><strong>₩500,000</strong><strong>₩100,000</strong></div>
 </div>
 <div class="basis"><span>APPROVED BASIS</span><strong>50 µL standard reaction</strong></div>
@@ -195,16 +381,16 @@
 <div class="product-info"><span class="cat">CAT. NO. C1120</span><h3>ZerothBIO Cell-Free Protein Synthesis Kit</h3><p>200 rxn</p></div>
 <div class="product-commercial">
 <div class="price-panel" aria-label="C1120 pricing">
-<div class="price-head"><span data-en="Total price" data-ko="총액">Total price</span><span data-en="Price / mL" data-ko="mL당 가격">Price / mL</span></div>
+<div class="price-head"><span data-en="Total price" data-ko="총 판매가">Total price</span><span data-en="Price / mL" data-ko="mL당 가격">Price / mL</span></div>
 <div class="price-values"><strong>₩800,000</strong><strong>₩80,000</strong></div>
 </div>
 <div class="basis"><span>APPROVED BASIS</span><strong>50 µL standard reaction</strong></div>
 </div>
 </article>
 <div class="bulk-price-row" role="note">
-<div><span class="cat">BULK</span><strong>100 mL~</strong></div>
+<div><span class="cat">BULK SUPPLY</span><strong>100 mL~</strong></div>
 <div class="bulk-price-value"><span data-en="Price / mL" data-ko="mL당 가격">Price / mL</span><strong>₩50,000</strong></div>
-<div class="bulk-price-note" data-en="Bulk supply: contact us for quotation and conditions." data-ko="Bulk 공급은 견적 및 조건을 별도 문의해 주세요.">Bulk supply: contact us for quotation and conditions.</div>
+<div class="bulk-price-note" data-en="Bulk supply is quoted separately depending on volume and supply conditions." data-ko="Bulk 공급은 수량 및 공급 조건에 따라 별도 견적합니다.">Bulk supply is quoted separately depending on volume and supply conditions.</div>
 </div>
 <div class="product-actions">
 <div class="product-action-links"><a class="button" href="mailto:zerothbio@gmail.com?subject=ZerothBIO%20CFPS%20Product%20Information"><span data-en="Request Product Information" data-ko="제품 정보 문의">Request Product Information</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#documents"><span data-en="Download Product Documents" data-ko="제품 자료 다운로드">Download Product Documents</span><span aria-hidden="true">↓</span></a></div>

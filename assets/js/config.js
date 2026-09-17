@@ -13,7 +13,7 @@ window.ZBIO_FORM = {
   },
 
   endpoint: 'zerothbio.com',                   // alternative backend URL (Apps Script / Formspree) when provider = 'endpoint'
-  adminEmail: 'zerothbio@gmail.com',
+  adminEmail: 'jh.park8401@gmail.com',
   minFillMs: 3000,                // submissions faster than this are treated as bots
   throttleMs: 10000               // one submission per 10 s per browser
 };

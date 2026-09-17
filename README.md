@@ -1,75 +1,52 @@
-# ZerothBIO Corporate Website — GitHub Pages Deployment
+# zerothbio.com — GitHub Pages release
 
-**Document:** ZBIO-BRD-WEB-SITE-001  
-**Release:** v1.0 / Controlled Release / External  
-**Deployment build:** 2026-09-15  
-**Target:** GitHub Pages static hosting
+Static site for **ZerothBIO** (Homepage v2). No build step: plain HTML/CSS/JS.
 
-## Deploy in GitHub
+```
+index.html          Homepage (EN)
+ko/index.html       Homepage (KR) — language switch EN / KR in the header
+404.html            Not-found page
+assets/css/style.css
+assets/js/main.js   Mobile menu, active nav, contact form (opens email app)
+assets/img/         Logos, hero photo, favicons, OG image
+downloads/          Approved PDFs (add before going live — see downloads/README.md)
+CNAME               Custom domain: www.zerothbio.com
+.nojekyll           Serve files as-is
+robots.txt, sitemap.xml
+```
 
-1. Create or open the GitHub repository that will host the website.
-2. Upload **all files and folders in this package to the repository root**. `index.html` must stay at the root.
-3. Commit/push to the `main` branch.
-4. In GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch**.
-5. Select **Branch: `main` / Folder: `/ (root)`**, then Save.
-6. Wait for GitHub Pages to publish the site.
+## Deploy (5 minutes)
 
-The package is intentionally dependency-free: plain HTML, CSS, JavaScript, images, PDF downloads, `robots.txt`, and `sitemap.xml`.
+1. Create a GitHub repository (e.g. `zerothbio.github.io` or `zerothbio-web`).
+2. Unzip this package and upload **the contents** (not the folder) to the repository root, including the hidden `.nojekyll` file.
+3. Repository → **Settings → Pages** → Source: *Deploy from a branch* → Branch `main` / `/ (root)` → Save.
+4. Add the PDFs to `downloads/` (see `downloads/README.md`).
 
-## Custom domain (optional)
+### Custom domain (www.zerothbio.com)
 
-The production metadata is set to `https://www.zerothbio.com/`. If GitHub Pages will serve that domain, configure DNS and the GitHub Pages **Custom domain** setting first, then rename `CNAME.example` to `CNAME`.
+`CNAME` is already set to `www.zerothbio.com`. At the DNS provider:
 
-If this repository is only a GitHub Pages preview, leave `CNAME.example` unchanged.
+| Type | Host | Value |
+| --- | --- | --- |
+| CNAME | `www` | `<github-username>.github.io` |
+| A | `@` | `185.199.108.153` · `185.199.109.153` · `185.199.110.153` · `185.199.111.153` |
 
-## Key files
+Then in Settings → Pages, enable **Enforce HTTPS** once the certificate is issued.
 
-- `index.html` — website entry point
-- `styles.css` — responsive styles
-- `script.js` — language toggle, navigation and reveal interactions
-- `assets/zerothbio-logo-horizontal.png` — approved horizontal logo asset
-- `assets/propel-closed-loop-protein-engineering-system.webp` — current cropped ProPEL DBTL web asset
-- `.nojekyll` — prevents Jekyll processing
+> Testing on `<user>.github.io` first? Delete `CNAME` until DNS is switched over — otherwise GitHub will try to claim the domain immediately.
 
-## Controlled content note
+## Languages
 
-External product messaging remains limited to the current commercial baseline used by the controlled website. Do not introduce unapproved product configurations, performance claims, or roadmap content directly in the repository without the applicable ZerothBIO source/claim review.
+- English: `/` · Korean: `/ko/` (linked with hreflang + sitemap alternates).
+- Keep both pages in sync: any product value, contact detail or document version change must be applied to **both** `index.html` and `ko/index.html`.
+- Korean copy uses the approved Korean slogan/terms (Brand plan v1.3.1 §6, Leaflet ZBIO-MKT-CFPS-LEF-001). Company name in Korean text: 제로스바이오; legal: (주)제로스바이오.
 
+## Contact form
 
-## Technical document downloads
+GitHub Pages has no server. The form validates input and opens the visitor's email app with a pre-filled message to `zerothbio@gmail.com`. To receive submissions directly, connect a form service (e.g. Formspree) later — a privacy notice will then be required.
 
-The website includes a **Product Literature & Technical Documents** section with direct same-origin download links:
+## Maintenance rules (ZBIO-BRD-WEB-001)
 
-- `downloads/ZerothBIO_CFPS_Product_Brochure.pdf`
-- `downloads/ZerothBIO_CFPS_Manual.pdf`
-- `downloads/ZerothBIO_MSDS_2x_MasterMix.pdf`
-- `downloads/ZerothBIO_MSDS_Ecoli_Extract.pdf`
-
-The brochure, manual and MSDS PDFs are copied byte-for-byte from the supplied source files; no PDF document content was edited during website packaging.
-
-### Release-control note
-
-Before production publication, review the footer/distribution language and contact details inside both MSDS files. The supplied MSDS documents currently contain an internal-use/external-use restriction statement.
-
-
-## v1.2 update
-
-- Added `downloads/ZerothBIO_CFPS_Product_Brochure.pdf`.
-- Added a Product Brochure download card to the Documents section.
-- Updated the CFPS section link to route users to all product documents.
-- Responsive document grid now supports four download assets.
-
-
-## Favicon files
-
-Included favicon assets:
-- assets/favicon-16x16.png
-- assets/favicon-32x32.png
-- assets/apple-touch-icon.png
-- assets/android-chrome-192x192.png
-- assets/android-chrome-512x512.png
-- assets/favicon.ico
-- site.webmanifest
-
-## v1.4 CFPS pricing update
-Added EN/KR pricing next to the CFPS inquiry note. Prices are shown as total / per mL; bulk total is unspecified. Existing assets, documents and scripts are preserved.
+- Colors, spacing and radii are CSS tokens in `:root` of `style.css` — do not hard-code new values.
+- **Never** apply CSS case transforms to text that contains units (µL → ΜL corruption, Product Master v1.4 §07). Type capitals literally.
+- Product values must match the approved Product Master / PDS / Manual. Performance values need value + unit + condition + evidence status.

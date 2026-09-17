@@ -6,9 +6,9 @@
  *
  * Setup: see form-backend/README.md
  */
-const ADMIN_EMAIL   = 'zerothbio@gmail.com';   // 알림 받을 관리자 메일
+const ADMIN_EMAIL   = 'jh.park8401@gmail.com';   // 알림 받을 관리자 메일
 const SHEET_NAME    = 'Inquiries';
-const ALLOWED_ORIGIN_HINT = 'zerothbio.com';    // page 필드에 포함돼야 정상 요청으로 처리
+const ALLOWED_ORIGIN_HINT = 'jh.park8401@gmail.com';    // page 필드에 포함돼야 정상 요청으로 처리
 const MAX_PER_EMAIL_PER_HOUR = 5;               // 같은 이메일 반복 제출 제한
 
 function doPost(e) {

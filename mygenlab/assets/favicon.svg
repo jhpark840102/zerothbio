@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#1ABBCF"/><path d="M11 6c0 8 10 8 10 16M21 6c0 8-10 8-10 16M11 26c0-1.5.7-2.6 1.8-3.4M21 26c0-1.5-.7-2.6-1.8-3.4" fill="none" stroke="#09223E" stroke-width="2.4" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <title>MyGenLab favicon</title>
+  <desc>White and teal M monogram with a green fluorescence dot on a navy rounded square.</desc>
+  <rect x="17" y="20" width="478" height="475" rx="88" fill="#09223E"/>
+  <path d="M100 419V140H159L251 260L347 142H378L410 177V419H344V245L252 355L165 245V419H100Z" fill="#FFFFFF"/>
+  <path d="M378 142L410 177V419H344V245L301 298L378 142Z" fill="#1ABBCF"/>
+  <circle cx="426" cy="121" r="33" fill="#6FDD8B"/>
+</svg>

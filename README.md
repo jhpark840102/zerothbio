@@ -1,6 +1,6 @@
 # zerothbio.com — GitHub Pages release
 
-Static site for **ZerothBIO** (Homepage v2). No build step: plain HTML/CSS/JS.
+Static site for **ZerothBIO** (Homepage v2.4 · MyGenLab Campus Edition). No build step: plain HTML/CSS/JS.
 
 ```
 index.html          Homepage (EN)
@@ -9,7 +9,7 @@ ko/index.html       Homepage (KR) — language switch EN / KR in the header
 assets/css/style.css
 assets/js/config.js Contact form settings (EmailJS keys) — edit this
 assets/js/main.js   Mobile menu, active nav, contact form logic
-assets/img/         Logos, hero photo, favicons, OG image
+assets/img/         Logos, hero photo, MyGenLab kit and animated GIF, favicons, OG image
 form-backend/       EmailJS setup guide + templates (not used by the site)
 downloads/          Approved PDFs (add before going live — see downloads/README.md)
 CNAME               Custom domain: www.zerothbio.com
@@ -42,6 +42,7 @@ Then in Settings → Pages, enable **Enforce HTTPS** once the certificate is iss
 - English: `/` · Korean: `/ko/` (linked with hreflang + sitemap alternates).
 - Keep both pages in sync: any product value, contact detail or document version change must be applied to **both** `index.html` and `ko/index.html`.
 - Korean copy uses the approved Korean slogan/terms (Brand plan v1.3.1 §6, Leaflet ZBIO-MKT-CFPS-LEF-001). Company name in Korean text: 제로스바이오; legal: (주)제로스바이오.
+- MyGenLab Campus is presented as ZerothBIO's cell-free synthetic biology education platform for undergraduate courses. Keep the EN/KR MyGenLab sections and Faculty Pilot topic synchronized.
 
 ## Contact form → admin email (EmailJS)
 

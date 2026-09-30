@@ -4,12 +4,16 @@
     <loc>https://www.zerothbio.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.zerothbio.com/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.zerothbio.com/ko/"/>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
   </url>
   <url>
     <loc>https://www.zerothbio.com/ko/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.zerothbio.com/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.zerothbio.com/ko/"/>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.zerothbio.com/mygenlab/</loc>
+    <lastmod>2026-09-30</lastmod>
   </url>
 </urlset>

@@ -14,7 +14,7 @@
   var f=document.getElementById('cform'),msg=document.getElementById('form-msg');
   if(!f)return;
   var C=window.ZBIO_FORM||{};
-  var ADMIN=C.adminEmail||'zerothbio@gmail.com';
+  var ADMIN=C.adminEmail||'zerothbio01@gmail.com';
   var MIN_FILL=typeof C.minFillMs==='number'?C.minFillMs:3000, THROTTLE=typeof C.throttleMs==='number'?C.throttleMs:10000;
   var M=ko?{
     missing:'다음 필수 항목을 입력해 주세요: ', consent:'개인정보 수집·이용 동의',

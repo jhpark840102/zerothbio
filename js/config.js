@@ -7,13 +7,13 @@ window.ZBIO_FORM = {
   provider: 'emailjs',            // 'emailjs' | 'endpoint' | 'mailto'
 
   emailjs: {
-    publicKey:  '56FygKIIqogu5u9iI',               // Account → General → Public Key
-    serviceId:  'service_2xtbnzv',               // Email Services → service_2xtbnzv
-    templateId: 'ejs-test-mail-service'                // Email Templates → ejs-test-mail-service
+    publicKey:  '',               // Account → General → Public Key
+    serviceId:  '',               // Email Services → Service ID (e.g. service_xxxxxxx)
+    templateId: ''                // Email Templates → admin notification Template ID (e.g. template_xxxxxxx)
   },
 
-  endpoint: 'zerothbio.com',                   // alternative backend URL (Apps Script / Formspree) when provider = 'endpoint'
-  adminEmail: 'jh.park8401@gmail.com',
+  endpoint: '',                   // alternative backend URL (Apps Script / Formspree) when provider = 'endpoint'
+  adminEmail: 'zerothbio01@gmail.com',
   minFillMs: 3000,                // submissions faster than this are treated as bots
   throttleMs: 10000               // one submission per 10 s per browser
 };

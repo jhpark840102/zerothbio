@@ -175,6 +175,7 @@ ol, ul { padding: 0; list-style: none; }
 .campus-copy p { font-size: 17px; line-height: 1.8; color: var(--on-navy); }
 .text-link { align-self: flex-start; color: var(--teal); font-weight: 700; font-size: 16px; text-decoration: none; border-bottom: 1.5px solid var(--teal); padding-bottom: 4px; }
 .text-link:hover { color: #7FE0EC; border-color: #7FE0EC; }
+.campus-links { display: flex; flex-wrap: wrap; gap: 12px 20px; }
 .campus-flow { width: 460px; flex-shrink: 0; display: flex; flex-direction: column; gap: 10px; }
 .campus-flow li { display: flex; align-items: center; gap: 16px; background: var(--navy-3); border-radius: 12px; padding: 16px 22px; }
 .cf-key { font-family: var(--display); font-size: 16px; font-weight: 700; color: var(--teal); width: 110px; flex-shrink: 0; }

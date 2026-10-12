@@ -1,0 +1,23 @@
+<!--
+EmailJS template 2 (선택): 문의자 자동 회신 (Auto-reply)
+관리자 알림 템플릿 → Auto-Reply 탭에서 이 템플릿을 연결하거나, 별도 템플릿으로 생성 후 연결
+
+[Settings 탭]
+  To Email   : {{email}}
+  From Name  : ZerothBIO
+  Reply To   : zerothbio@gmail.com
+  Subject    : [ZerothBIO] 문의가 접수되었습니다 · We received your inquiry
+-->
+<div style="font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic',Arial,sans-serif;color:#212121;max-width:600px;margin:0 auto;line-height:1.65">
+  <div style="border-bottom:2px solid #09223E;padding:18px 0;font-size:18px;font-weight:700;color:#09223E">ZerothBIO</div>
+  <p style="margin:20px 0 8px">{{name}}님, 안녕하세요.</p>
+  <p style="margin:0 0 16px">제로스바이오에 문의해 주셔서 감사합니다. 아래 내용으로 문의가 접수되었으며, 담당자가 확인 후 이 이메일 주소로 답변드리겠습니다.</p>
+  <div style="background:#F3F3F3;border-radius:6px;padding:12px 16px;font-size:14px">
+    <b>문의 유형</b> {{topic}}<br><b>접수 시각</b> {{submitted_at}}
+  </div>
+  <p style="margin:24px 0 8px;color:#5C626B;font-size:14px">Dear {{name}}, thank you for contacting ZerothBIO. We have received your inquiry and will reply to this email address.</p>
+  <p style="margin:24px 0 0;font-size:13px;color:#8B9098">
+    (주)제로스바이오 · ZerothBIO Inc. · zerothbio@gmail.com · 070-8064-1061 · www.zerothbio.com<br>
+    Before the First, There’s Zeroth.
+  </p>
+</div>

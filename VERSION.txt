@@ -1,3 +1,4 @@
-ZBIO-BRD-WEB-SITE-001 ZerothBIO GitHub Pages Deployment v1.4 Pricing
-Base: v1.3_Favicon
-Feature: bilingual CFPS pricing table (KRW total and per mL)
+Website v2.6 — CFPS DNA Design Integrated Edition
+Base: user-supplied zerothbio-web.zip (v2.5)
+Tool: v1.5.0
+Build: 2026-10-21

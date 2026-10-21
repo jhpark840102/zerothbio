@@ -1,0 +1,26 @@
+[
+  {
+    "file": "ZerothBIO_CFPS_Manual.pdf",
+    "bytes": 788846,
+    "sha256": "6aff57c03dd5bb720fcbce2f6a3eafd993e1366e4b8d1f2e0b63d6551ce43f94",
+    "source": "https://www.zerothbio.com/downloads/ZerothBIO_CFPS_Manual.pdf"
+  },
+  {
+    "file": "ZerothBIO_CFPS_Product_Sheet_PDS-001_v1.1.pdf",
+    "bytes": 148407,
+    "sha256": "433780198e8aecb2daa4b111219a432568c3a31be277665fa2c2a478d127aa2a",
+    "source": "https://www.zerothbio.com/downloads/ZerothBIO_CFPS_Product_Sheet_PDS-001_v1.1.pdf"
+  },
+  {
+    "file": "ZerothBIO_MSDS_2x_MasterMix.pdf",
+    "bytes": 176896,
+    "sha256": "91dceb4fba11f85c9ac2555b385b62b535792f9000f6c9d031a9e2920cfef21b",
+    "source": "https://www.zerothbio.com/downloads/ZerothBIO_MSDS_2x_MasterMix.pdf"
+  },
+  {
+    "file": "ZerothBIO_MSDS_Ecoli_Extract.pdf",
+    "bytes": 169260,
+    "sha256": "e6db7e14bb6f5dbe7b7ec8f67a28860261d4fac3d5b7d2de778c20bb5cc6bee0",
+    "source": "https://www.zerothbio.com/downloads/ZerothBIO_MSDS_Ecoli_Extract.pdf"
+  }
+]

@@ -1,10 +1,15 @@
+# v2.6 CFPS DNA Design Integrated Edition
+
+Built from the supplied current website ZIP (v2.5), preserving existing pages, form configuration and domain settings. See DEPLOYMENT_KO.md.
+
 # zerothbio.com — GitHub Pages release
 
-Static site for **ZerothBIO** (Homepage v2.4 · MyGenLab Campus Edition). No build step: plain HTML/CSS/JS.
+Static site for **ZerothBIO** (Homepage v2.5 · MyGenLab Integrated Edition). No build step: plain HTML/CSS/JS.
 
 ```
 index.html          Homepage (EN)
 ko/index.html       Homepage (KR) — language switch EN / KR in the header
+mygenlab/index.html Dedicated MyGenLab introduction site linked from EN/KR homepages
 404.html            Not-found page
 assets/css/style.css
 assets/js/config.js Contact form settings (EmailJS keys) — edit this
@@ -39,10 +44,10 @@ Then in Settings → Pages, enable **Enforce HTTPS** once the certificate is iss
 
 ## Languages
 
-- English: `/` · Korean: `/ko/` (linked with hreflang + sitemap alternates).
+- English: `/` · Korean: `/ko/` · MyGenLab: `/mygenlab/`.
 - Keep both pages in sync: any product value, contact detail or document version change must be applied to **both** `index.html` and `ko/index.html`.
 - Korean copy uses the approved Korean slogan/terms (Brand plan v1.3.1 §6, Leaflet ZBIO-MKT-CFPS-LEF-001). Company name in Korean text: 제로스바이오; legal: (주)제로스바이오.
-- MyGenLab Campus is presented as ZerothBIO's cell-free synthetic biology education platform for undergraduate courses. Keep the EN/KR MyGenLab sections and Faculty Pilot topic synchronized.
+- MyGenLab Campus is presented as ZerothBIO's cell-free synthetic biology education platform. Keep the EN/KR summary sections, `/mygenlab/` page and Faculty Pilot contact synchronized.
 
 ## Contact form → admin email (EmailJS)
 

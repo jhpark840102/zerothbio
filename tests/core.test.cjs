@@ -1,0 +1,25 @@
+const assert=require('assert/strict'),fs=require('fs'),path=require('path');
+const dir=path.resolve(__dirname,'../tools/cfps-design');
+require(path.join(dir,'pet28a-seq.js'));const api=require(path.join(dir,'cfps-design.js'));
+const gfp=JSON.parse(fs.readFileSync(path.join(dir,'example.js'),'utf8').split(' = ')[1].replace(/;\s*$/,''));
+let results=[];function test(name,fn){try{fn();results.push({name,status:'PASS'});}catch(e){results.push({name,status:'FAIL',error:e.message});}}
+const dna=g=>' '+g.text.split('ORIGIN\n')[1].split('//')[0].replace(/[^a-z]/g,'').toUpperCase();
+for(const option of [1,2,3])test('GFP option '+option,()=>{const d=api.design(gfp,option);assert.deepEqual(d.errors,[]);const g=api.genbank(d,option);assert.ok(!g.error,g.error);assert.equal(g.length,option===2?6007:922);assert.equal(dna(g).trim().length,g.length);if(option!==2)assert.match(g.text,/RBS \(SD motif/);});
+test('empty input rejected',()=>assert.ok(api.design('',1).errors.length));
+test('multiple FASTA rejected',()=>assert.ok(api.design('>one\nATGAAA\n>two\nATGAAATAA',1).errors.length));
+test('non ATG rejected for NdeI',()=>assert.ok(api.design('GTG'+'GCT'.repeat(20)+'TAA',2).errors.length));
+for(const o of [2,3])test('short input option '+o,()=>assert.ok(api.design('ATGTAA',o).errors.length));
+for(const o of [1,2,3])for(const utr5 of ['BAD N','A',''])test('invalid UTR '+o+' '+utr5,()=>assert.ok(api.design(gfp,o,{utr5}).errors.length));
+test('UTR whitespace normalized',()=>assert.equal(api.design(gfp,1,{utr5:' '+api.DEFAULTS.utr5+'\n'}).result.length,922));
+test('unreachable overlap target rejected',()=>assert.ok(api.design(gfp,3,{utr5:'A'.repeat(20),utr3:'T'.repeat(20),overlapTm:80}).errors.length));
+test('bad option rejected',()=>assert.ok(api.design(gfp,4).errors.length));
+test('bad settings rejected',()=>assert.ok(api.design(gfp,3,{overlap:NaN,tmTarget:NaN}).errors.length));
+test('unknown enzyme rejected',()=>assert.equal(api.design(gfp,2,{petPick:{fw:'oops'}}).result.noPair,true));
+test('reversed enzyme order rejected',()=>assert.equal(api.design('ATG'+'GCT'.repeat(20)+'TAA',2,{petPick:{fw:'NotI',rv:'BamHI'}}).result.noPair,true));
+test('internal stop rejected',()=>assert.ok(api.design('ATGTAAGCTTAA',1).errors.length));
+test('missing stop flagged; actual reverse annealing',()=>{const d=api.design(gfp.slice(0,-3),3);assert.ok(d.cfg.addedStop);assert.ok(api.revcomp(gfp.slice(0,-3)).startsWith(d.result.step1.rvAnneal));assert.equal(d.result.step1.product,api.design(gfp,3).result.step1.product);});
+test('NheI tag description corrected',()=>assert.match(api.design('ATG'+'GCT'.repeat(20)+'TAA',2,{petPick:{fw:'NheI',rv:'XhoI'}}).result.cfpsNotes.join(' '),/완전한 T7-tag 없음/));
+for(const fw of ['NdeI','NheI','BamHI','EcoRI','SacI','SalI','HindIII','NotI'])for(const petStop of [true,false])test('fusion CDS '+fw+' stop='+petStop,()=>{const d=api.design('ATG'+'GCT'.repeat(20)+'TAA',2,{petStop,petPick:{fw,rv:'XhoI'}}),g=api.genbank(d,2);assert.ok(!g.error,g.error);const m=g.text.match(/CDS\s+(\d+)\.\.(\d+)\n\s+\/label="Expression fusion CDS"\n\s+\/codon_start=1\n\s+\/translation="([^"]+)"/);assert.ok(m);assert.equal((Number(m[2])-Number(m[1])+1)%3,0);assert.ok(!m[3].includes('*'));if(!petStop)assert.ok(m[3].endsWith('HHHHHH'));});
+test('genbank prevents invalid export',()=>assert.ok(api.genbank(api.design('',1),1).error));
+test('no server/network code in tool',()=>{const app=fs.readFileSync(path.join(dir,'app.js'),'utf8');assert.ok(!/\bfetch\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage/.test(app));});
+fs.writeFileSync(path.join(__dirname,'test-results.json'),JSON.stringify(results,null,2));console.log(JSON.stringify({passed:results.filter(r=>r.status==='PASS').length,failed:results.filter(r=>r.status==='FAIL')},null,2));if(results.some(r=>r.status==='FAIL'))process.exitCode=1;

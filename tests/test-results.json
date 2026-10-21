@@ -1,0 +1,178 @@
+[
+  {
+    "name": "GFP option 1",
+    "status": "PASS"
+  },
+  {
+    "name": "GFP option 2",
+    "status": "PASS"
+  },
+  {
+    "name": "GFP option 3",
+    "status": "PASS"
+  },
+  {
+    "name": "empty input rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "multiple FASTA rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "non ATG rejected for NdeI",
+    "status": "PASS"
+  },
+  {
+    "name": "short input option 2",
+    "status": "PASS"
+  },
+  {
+    "name": "short input option 3",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 1 BAD N",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 1 A",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 1 ",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 2 BAD N",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 2 A",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 2 ",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 3 BAD N",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 3 A",
+    "status": "PASS"
+  },
+  {
+    "name": "invalid UTR 3 ",
+    "status": "PASS"
+  },
+  {
+    "name": "UTR whitespace normalized",
+    "status": "PASS"
+  },
+  {
+    "name": "unreachable overlap target rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "bad option rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "bad settings rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "unknown enzyme rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "reversed enzyme order rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "internal stop rejected",
+    "status": "PASS"
+  },
+  {
+    "name": "missing stop flagged; actual reverse annealing",
+    "status": "PASS"
+  },
+  {
+    "name": "NheI tag description corrected",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS NdeI stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS NdeI stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS NheI stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS NheI stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS BamHI stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS BamHI stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS EcoRI stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS EcoRI stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS SacI stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS SacI stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS SalI stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS SalI stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS HindIII stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS HindIII stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS NotI stop=true",
+    "status": "PASS"
+  },
+  {
+    "name": "fusion CDS NotI stop=false",
+    "status": "PASS"
+  },
+  {
+    "name": "genbank prevents invalid export",
+    "status": "PASS"
+  },
+  {
+    "name": "no server/network code in tool",
+    "status": "PASS"
+  }
+]
